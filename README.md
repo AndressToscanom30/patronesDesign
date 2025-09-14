@@ -1,4 +1,4 @@
-# patronesDesign
+# Readme generado con ayuda de copilot
 
 Este repositorio contiene implementaciones de patrones de diseño (creacionales, estructurales y comportamentales) con ejemplos y diagramas de clases. A continuación se describen las implementaciones incluidas, su situación práctica y el diagrama de clases correspondiente.
 
@@ -19,11 +19,8 @@ Descripción de la implementación:
 - Creator (GeneradorReporte): Clase abstracta que declara un método factory `crearReporte(tipo)` que devuelve un `Reporte`.
 - ConcreteCreator (GeneradorReporteConcreto): Implementaciones del creador que instancian productos concretos según el tipo solicitado por el cliente.
 
-Beneficio:
-La lógica de negocio solo solicita un reporte al creador y obtiene una implementación concreta sin conocer los detalles de creación. Para agregar un nuevo formato solo se añade una nueva clase concreta y se adapta la fábrica.
-
 Diagrama de clases:
-![Factory Method Diagram](images/factory_method_diagram.svg)
+![Factory Method Diagram](PatronFactoryMethod.png)
 
 ---
 
@@ -43,11 +40,8 @@ Descripción de la implementación:
 - Adaptee (APIServicioTarjeta, ServicioPayPal, ServicioCrypto): APIs externas con interfaces incompatibles.
 - Adapter (AdaptadorPago): Clases adaptadoras que implementan `IPago` y traducen las llamadas a la interfaz de las APIs externas.
 
-Beneficio:
-Los adaptadores permiten integrar servicios heterogéneos sin necesidad de modificar sus implementaciones originales. La aplicación interactúa solo con `IPago`.
-
 Diagrama de clases:
-![Adapter Pattern Diagram](images/adapter_pattern_diagram.svg)
+![Adapter Pattern Diagram](PatronAdapter.png)
 
 ---
 
@@ -62,22 +56,5 @@ Descripción de la implementación:
 - Observer (Suscriptor): Interfaz que define el método `actualizar(evento)` que reciben las notificaciones.
 - ConcreteObserver (UsuarioSuscrito): Implementaciones concretas que reaccionan a las notificaciones.
 
-Beneficio:
-Permite la comunicación uno-a-muchos entre emisores y receptores sin acoplamiento fuerte; se puede agregar o quitar observadores en tiempo de ejecución.
-
 Diagrama de clases:
-![Observer Pattern Diagram](images/observer_pattern_diagram.svg)
-
----
-
-Ubicación de los diagramas:
-- images/factory_method_diagram.svg
-- images/adapter_pattern_diagram.svg
-- images/observer_pattern_diagram.svg
-
-Cada diagrama es un SVG con un esquema de las clases y relaciones para facilitar su visualización y edición.
-
-----
-
-Contribuciones:
-Si quieres, puedo añadir ejemplos de código para cada patrón en Java, C# o TypeScript, o integrar pruebas y scripts de demostración. Indícame el lenguaje deseado y lo agrego.
+![Observer Pattern Diagram](PatronObserver.png)
