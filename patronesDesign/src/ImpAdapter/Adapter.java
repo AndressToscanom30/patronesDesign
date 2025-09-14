@@ -44,7 +44,7 @@ public class Adapter implements Payment{
                 break;
                 
             default:
-                System.out.println("❌ Error: método de pago no soportado");
+                System.out.println("Error: método de pago no soportado");
         }
     }
     
